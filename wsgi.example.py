@@ -14,7 +14,11 @@ from werkzeug.wsgi import DispatcherMiddleware
 from scryb import frontend
 
 
-frontend_app = frontend.create_app()
+frontend_app = frontend.create_app(settings_override={
+    'DEBUG': True,
+    'DEV': True,
+    'SECRET_KEY': 'secret passphrase',
+})
 
 
 if __name__ == '__main__':

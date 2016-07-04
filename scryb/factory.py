@@ -9,6 +9,7 @@
     :license: MIT license. See LICENSE file.
 """
 
+from os import getenv
 from flask import Flask
 
 from .helpers import register_blueprints
@@ -22,8 +23,7 @@ def create_app(package_name, package_path, settings_override=None):
     :param settings_override: a dictionary of settings to override
     """
 
-    app = Flask(package_name, instance_relative_config=True)
-    app.config.from_pyfile('settings.cfg', silent=True)
+    app = Flask(package_name)
     app.config.from_object(settings_override)
 
     register_blueprints(app, package_name, package_path)
