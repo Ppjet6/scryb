@@ -23,7 +23,7 @@ eggs/
 .eggs/
 bin/
 lib/
-lib64/
+lib64
 parts/
 sdist/
 var/
@@ -40,6 +40,8 @@ var/
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
+pip-selfcheck.json
+pyvenv.cfg
 
 # Unit test / coverage reports
 htmlcov/
