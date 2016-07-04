@@ -21,10 +21,7 @@ frontend_app = frontend.create_app(settings_override={
 
 
 if __name__ == '__main__':
-    run_simple(
-        frontend_app.config.get('HOST', 'localhost'),
-        frontend_app.config.get('PORT', 5000),
-        frontend_app,
+    run_simple('localhost', 5000, frontend_app,
         use_debugger=frontend_app.config.get('DEBUG'),
         use_reloader=frontend_app.config.get('DEBUG'),
     )
