@@ -10,7 +10,6 @@
 """
 
 from werkzeug.serving import run_simple
-from werkzeug.wsgi import DispatcherMiddleware
 from scryb import frontend
 
 
