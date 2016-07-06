@@ -25,6 +25,7 @@ def create_app(package_name, package_path, settings_override=None):
     """
 
     app = Flask(package_name)
+    app.config.from_object('scryb.settings')
     app.config.from_object(settings_override)
 
     db.init_app(app)
