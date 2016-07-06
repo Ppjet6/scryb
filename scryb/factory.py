@@ -12,6 +12,7 @@
 from os import getenv
 from flask import Flask
 
+from .core import db
 from .helpers import register_blueprints
 
 
@@ -25,6 +26,8 @@ def create_app(package_name, package_path, settings_override=None):
 
     app = Flask(package_name)
     app.config.from_object(settings_override)
+
+    db.init_app(app)
 
     register_blueprints(app, package_name, package_path)
 

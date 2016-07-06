@@ -8,3 +8,7 @@
 
     :license: MIT license. See LICENSE file.
 """
+
+from flask_sqlalchemy import SQLAlchemy
+
+db = SQLAlchemy()
